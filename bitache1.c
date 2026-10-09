@@ -1,6 +1,6 @@
 /******************************************************************************
  * Fichier           : bitache1.c
- * Auteur            : CHAPRON Willem
+ * Auteur            : CHAPRON Willem & CAZALS Gauthier
  * Date de création  : 2 octobre 2026
  * Description       : Programme illustrant la création d'un processus fils via 
  *                     fork() et l'attente de sa fin par le père avec wait(). 
