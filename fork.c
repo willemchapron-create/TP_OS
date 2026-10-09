@@ -1,6 +1,6 @@
 /******************************************************************************
  * Fichier           : fork.c
- * Auteur            : CHAPRON Willem
+ * Auteur            : CHAPRON Willem & CAZALS Gauthier
  * Date de création  : 2 octobre 2026
  * Description       : Démonstration du mécanisme de fork() et de l'indépendance 
  *                     des espaces mémoire. Le père et le fils modifient 
