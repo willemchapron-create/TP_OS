@@ -1,6 +1,6 @@
 /******************************************************************************
  * Fichier           : tache.c
- * Auteur            : CHAPRON Willem
+ * Auteur            : CHAPRON Willem & CAZALS Gauthier
  * Date de création  : 2 octobre 2026
  * Description       : Programme de base affichant les identifiants système 
  *                     du processus (PID, PPID, UID, GID) avant d'entrer dans 
