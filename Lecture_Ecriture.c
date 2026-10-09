@@ -1,3 +1,12 @@
+/******************************************************************************
+ * Fichier           : lecteur_redacteur_sem.c
+ * Auteur            : Chapron Willem
+ * Date de création  : 2 octobre 2026
+ * Description       : Écriture continue de blocs de caractères dans un fichier 
+ *                     par un processus père, et lecture/affichage par un fils. 
+ *                     L'intégrité des données (garantie de blocs homogènes) 
+ *                     est assurée par un sémaphore d'exclusion mutuelle.
+ *****************************************************************************/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
