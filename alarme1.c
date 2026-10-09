@@ -1,3 +1,12 @@
+/******************************************************************************
+ * Fichier           : alarme1.c
+ * Auteur            : CHAPRON Willem
+ * Date de création  : 2 octobre 2026
+ * Description       : Chien de garde (watchdog) utilisant alarm() et SIGALRM.
+ *                     Le père laisse 5 secondes à l'utilisateur pour saisir 
+ *                     un texte envoyé au fils (en lecture bloquante sur un 
+ *                     tube). Si le délai expire, le père tue le fils via SIGKILL.
+ *****************************************************************************/
 #include <fcntl.h>
 #include <signal.h>
 #include <stdio.h>
