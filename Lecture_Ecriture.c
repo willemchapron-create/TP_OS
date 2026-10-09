@@ -1,5 +1,5 @@
 /******************************************************************************
- * Fichier           : lecteur_redacteur_sem.c
+ * Fichier           : Lecture_Ecriture.c
  * Auteur            : Chapron Willem
  * Date de création  : 2 octobre 2026
  * Description       : Écriture continue de blocs de caractères dans un fichier 
