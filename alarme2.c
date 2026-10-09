@@ -1,6 +1,6 @@
 /******************************************************************************
  * Fichier           : alarme2.c
- * Auteur            : CHAPRON Willem
+ * Auteur            : CHAPRON Willem & CAZALS Gauthier
  * Date de création  : 9 octobre 2026
  * Description       : Chien de garde avec traitement asynchrone. Le fils 
  *                     exécute un calcul continu en tâche de fond. Le père lit 
