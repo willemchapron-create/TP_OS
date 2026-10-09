@@ -1,3 +1,12 @@
+/******************************************************************************
+ * Fichier           : custom_shell.c
+ * Auteur            : CHAPRON Willem
+ * Date de création  : 2 octobre 2026
+ * Description       : Mini-interpréteur de commandes (shell personnalisé). 
+ *                     Il lit des commandes francisées en boucle (dir, quisuisje, 
+ *                     ousuisje) et exécute les utilitaires Linux correspondants 
+ *                     grâce à la primitive de recouvrement execvp() dans un fils.
+ *****************************************************************************/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
