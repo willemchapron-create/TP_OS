@@ -1,3 +1,12 @@
+/******************************************************************************
+ * Fichier           : tache.c
+ * Auteur            : CHAPRON Willem
+ * Date de création  : 2 octobre 2026
+ * Description       : Programme de base affichant les identifiants système 
+ *                     du processus (PID, PPID, UID, GID) avant d'entrer dans 
+ *                     une boucle infinie. Idéal pour observer son exécution 
+ *                     en arrière-plan ou tester l'envoi de signaux.
+ *****************************************************************************/
 #include <stdio.h>
 #include <unistd.h>
 #include <sys/types.h>
