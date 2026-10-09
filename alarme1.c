@@ -1,6 +1,6 @@
 /******************************************************************************
  * Fichier           : alarme1.c
- * Auteur            : CHAPRON Willem
+ * Auteur            : CHAPRON Willem & CAZALS Gauthier
  * Date de création  : 2 octobre 2026
  * Description       : Chien de garde (watchdog) utilisant alarm() et SIGALRM.
  *                     Le père laisse 5 secondes à l'utilisateur pour saisir 
