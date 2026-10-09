@@ -1,6 +1,6 @@
 /******************************************************************************
  * Fichier           : filtre.c
- * Auteur            : CHAPRON WIllem
+ * Auteur            : CHAPRON WIllem & CAZALS Gauthier
  * Date de création  : 9 octobre 2026
  * Description       : Système de filtrage concurrent utilisant 4 tubes (pipes). 
  *                     Le processus père lit une saisie, sépare les lettres et 
