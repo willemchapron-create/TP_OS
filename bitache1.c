@@ -1,3 +1,12 @@
+/******************************************************************************
+ * Fichier           : bitache1.c
+ * Auteur            : CHAPRON Willem
+ * Date de création  : 2 octobre 2026
+ * Description       : Programme illustrant la création d'un processus fils via 
+ *                     fork() et l'attente de sa fin par le père avec wait(). 
+ *                     Le père analyse ensuite le mode de terminaison du fils 
+ *                     (normale ou anormale) via les macros WIFEXITED/WIFSIGNALED.
+ *****************************************************************************/
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
