@@ -1,4 +1,12 @@
-// alarme2.c
+/******************************************************************************
+ * Fichier           : alarme2.c
+ * Auteur            : CHAPRON Willem
+ * Date de création  : 9 octobre 2026
+ * Description       : Chien de garde avec traitement asynchrone. Le fils 
+ *                     exécute un calcul continu en tâche de fond. Le père lit 
+ *                     une entrée chronométrée (5s), la place dans un tube, puis 
+ *                     interrompt le fils avec SIGUSR1 pour déclencher la lecture.
+ *****************************************************************************/
 #include <fcntl.h>
 #include <signal.h>
 #include <stdio.h>
