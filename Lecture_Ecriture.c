@@ -1,6 +1,6 @@
 /******************************************************************************
  * Fichier           : Lecture_Ecriture.c
- * Auteur            : Chapron Willem
+ * Auteur            : Chapron Willem & CAZALS Gauthier
  * Date de création  : 2 octobre 2026
  * Description       : Écriture continue de blocs de caractères dans un fichier 
  *                     par un processus père, et lecture/affichage par un fils. 
