@@ -1,6 +1,6 @@
 /******************************************************************************
  * Fichier           : bitache2.c
- * Auteur            : CHAPRON Willem
+ * Auteur            : CHAPRON Willem & CAZALS Gauthier
  * Date de création  : 2 octobre 2026
  * Description       : Communication unidirectionnelle de base via un tube 
  *                     anonyme (pipe). Le processus père acquiert une chaîne 
