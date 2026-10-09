@@ -1,4 +1,12 @@
-// bitache2.c
+/******************************************************************************
+ * Fichier           : bitache2.c
+ * Auteur            : CHAPRON Willem
+ * Date de création  : 2 octobre 2026
+ * Description       : Communication unidirectionnelle de base via un tube 
+ *                     anonyme (pipe). Le processus père acquiert une chaîne 
+ *                     au clavier et la transmet au fils, qui effectue une 
+ *                     lecture bloquante limitée aux 5 premiers caractères.
+ *****************************************************************************/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
