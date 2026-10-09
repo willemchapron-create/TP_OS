@@ -1,5 +1,5 @@
 /******************************************************************************
- * Fichier           : 1base_fork.c
+ * Fichier           : fork.c
  * Auteur            : CHAPRON Willem
  * Date de création  : 2 octobre 2026
  * Description       : Démonstration du mécanisme de fork() et de l'indépendance 
