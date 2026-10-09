@@ -1,4 +1,12 @@
-//base_fork
+/******************************************************************************
+ * Fichier           : 1base_fork.c
+ * Auteur            : CHAPRON Willem
+ * Date de création  : 2 octobre 2026
+ * Description       : Démonstration du mécanisme de fork() et de l'indépendance 
+ *                     des espaces mémoire. Le père et le fils modifient 
+ *                     chacun de leur côté une variable globale et une variable 
+ *                     locale pour prouver que leurs mémoires sont séparées.
+ *****************************************************************************/
 #include <fcntl.h>
 #include <stdio.h>
 #include <stdlib.h>
