@@ -1,6 +1,6 @@
 /******************************************************************************
  * Fichier           : custom_shell.c
- * Auteur            : CHAPRON Willem
+ * Auteur            : CHAPRON Willem & CAZALS Gauthier
  * Date de création  : 2 octobre 2026
  * Description       : Mini-interpréteur de commandes (shell personnalisé). 
  *                     Il lit des commandes francisées en boucle (dir, quisuisje, 
