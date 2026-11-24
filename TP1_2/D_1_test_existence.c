@@ -55,8 +55,6 @@ void gerer_pere(void)
 // FILS : Simule un temps de traitement
 void gerer_fils(void)
 {
-	// Le processus s'endort 3 secondes (plus pratique pour du test)
-    // à remplacer par 30 pour convenir au cahier des charges.
-	sleep(3);
+	sleep(30); // on endort le processus pendant 30 secondes
 	exit(0);
 }
