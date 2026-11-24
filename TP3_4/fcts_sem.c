@@ -1,13 +1,13 @@
 //fcts_sem
 /*
-	Fonctions pour exploiter les fonctions de base des sémaphores
+	Fonctions pour exploiter les fonctions de base des sÃ©maphores
 */
 #include <sys/types.h>
 #include <sys/ipc.h>
 #include <sys/sem.h>
 #include <errno.h>
 
-// Déclaration des prototypes des fonctions
+// DÃ©claration des prototypes des fonctions
 int creersem_partage(char *argv[]);
 int creersem_synchro(char *argv[]);
 int creersem(char *argv[],int valinit, int indice);
@@ -26,27 +26,27 @@ union semun
 	};
 
 /*
-	Fonctions spécifiques à la gestion des sémaphores
+	Fonctions spÃ©cifiques Ã  la gestion des sÃ©maphores
 */
 
-// Fonctions liées à la gestion d'une ressource
-void prendresem(int semid)			// Pour réserver une ressource
+// Fonctions liÃ©es Ã  la gestion d'une ressource
+void prendresem(int semid)			// Pour rÃ©server une ressource
 {
 static struct sembuf att_prise={0,-1,0};
-if (semop(semid,&att_prise,1)==-1)		// Attente de libération du sémaphore & prise
+if (semop(semid,&att_prise,1)==-1)		// Attente de libÃ©ration du sÃ©maphore & prise
 	perror("Echec semop prendresem ");		
 }
 
-void rendresem(int semid)			// Pour libérer la ressource
+void rendresem(int semid)			// Pour libÃ©rer la ressource
 {
 static struct sembuf liberer={0,1,0};
 if (semop(semid,&liberer,1)==-1)
-	perror("Echec semop rendresem ");		// Libération de la ressource
+	perror("Echec semop rendresem ");		// LibÃ©ration de la ressource
 }
 
-// Fonctions liées à la synchronisation de processus
+// Fonctions liÃ©es Ã  la synchronisation de processus
 
-void attendresemnul(int semid)		// Attente de la nullité du sémaphore
+void attendresemnul(int semid)		// Attente de la nullitÃ© du sÃ©maphore
 {
 static struct sembuf liberer={0,0,0};
 if (semop(semid,&liberer,1)==-1)		
@@ -67,37 +67,37 @@ if (semop(semid,&att_prise,1)==-1)
 	perror("Echec semop decrementer ");
 }
 
-// Fonctions liées à l'initialisation, la création des sémaphores et la destruction des sémaphores
+// Fonctions liÃ©es Ã  l'initialisation, la crÃ©ation des sÃ©maphores et la destruction des sÃ©maphores
 
 int creersem(char *argv[],int valinit, int indice)
 {
-int semid;					// Numéro d'identification du jeu de sémaphores
-key_t cle;					// Clé unique du syteme IPC
-int semflg = IPC_CREAT | 0666;	// option (création) et permissions
+int semid;					// NumÃ©ro d'identification du jeu de sÃ©maphores
+key_t cle;					// ClÃ© unique du syteme IPC
+int semflg = IPC_CREAT | 0666;	// option (crÃ©ation) et permissions
 			
-int nsems = 1;				// Nombre de sémaphores
+int nsems = 1;				// Nombre de sÃ©maphores
 union semun arg;
 
-if ((cle=ftok(argv[0],indice))==-1)	// Création de la clé
+if ((cle=ftok(argv[0],indice))==-1)	// CrÃ©ation de la clÃ©
 	{
 	perror("Probleme sur ftok ");
 	exit(-1);
 	}
-else printf("creersem: Clé obtenue\n");
-printf("creersem: création du sémaphore\n");	
+else printf("creersem: ClÃ© obtenue\n");
+printf("creersem: crÃ©ation du sÃ©maphore\n");	
 
 if ((semid = semget(cle, nsems, semflg)) == -1) 
 	{
-	perror("semget: Echec lors de la création du sémaphore ");
+	perror("semget: Echec lors de la crÃ©ation du sÃ©maphore ");
 	exit(-1);
 	}
-else printf("creersem: sémaphore créé, semid=%d\n",semid);
+else printf("creersem: sÃ©maphore crÃ©Ã©, semid=%d\n",semid);
 
-arg.val=valinit;					// Valeur initiale du sémaphore
+arg.val=valinit;					// Valeur initiale du sÃ©maphore
 if (semctl(semid,0,SETVAL,arg)==-1)
 	{
-	perror("Erreur à l'initialisation ");
-	semctl(semid,IPC_RMID,NULL);		// Effacement du sémaphore
+	perror("Erreur Ã  l'initialisation ");
+	semctl(semid,IPC_RMID,NULL);		// Effacement du sÃ©maphore
 	exit(-1);
 	}
 
@@ -118,6 +118,6 @@ return(semid);
 
 void detruiresem(int semid)
 {
-semctl(semid,IPC_RMID,NULL);		// Effacement du sémaphore
+semctl(semid,IPC_RMID,NULL);		// Effacement du sÃ©maphore
 }
 
